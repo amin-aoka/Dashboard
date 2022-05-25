@@ -71,7 +71,7 @@ h5 {
 
 .container {
     display: grid;
-    grid-template-columns: 14rem auto 23rem;
+    grid-template-columns: 13rem auto 23rem;
     grid-gap: 1.8rem;
     width: 96%;
     margin: auto;
@@ -112,9 +112,7 @@ aside {
     flex-direction: column;
     position: relative;
     height: 96vh;
-
 }
-
 
 .side-bar a {
     display: flex;
@@ -130,7 +128,7 @@ aside {
 
 aside h3 {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .side-bar a span {
@@ -171,19 +169,41 @@ aside h3 {
     border-radius: 5px;
     background-color:#e2e3f0;
     margin-top:1.5rem;
-
 }
 
 .status{
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    padding:2rem 1.5rem 2rem 0.5rem;
     gap:1.6rem;
 }
 .status-box{
 
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
-    padding: var(--card-padding);
     border-radius: var(--card-border-radius);
+}
+.status-box span {
+    padding:0.4rem;
+    border-radius:50%;
+    color:white;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.one span{
+    background-color:var(--color-primary) ;
+}
+.two span{
+    background-color: var(--color-danger);
+}
+.three span {
+    background-color: var(--color-success);
+}
+
+.middle{
+    display:flex;
+    justify-content: space-between;
+}
+
+.progress {
 }
