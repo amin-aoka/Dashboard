@@ -23,10 +23,10 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    outline: 0;
+    margin:0;
+    padding:0;
+    outline:0;
+    outline:0;
     box-sizing: border-box;
     appearance: none;
     overflow: hidden;
@@ -51,10 +51,14 @@ body {
 h1 {
     font-weight: 800;
     font-size: 1.8rem;
+    color:#2b2b30;
+
 }
 
 h2 {
     font-size: 1.4rem;
+    color:#2b2b30;
+
 }
 
 h3 {
@@ -71,7 +75,7 @@ h5 {
 
 .container {
     display: grid;
-    grid-template-columns: 14rem auto 23rem;
+    grid-template-columns: 13rem auto 20rem;
     grid-gap: 1.8rem;
     width: 96%;
     margin: auto;
@@ -177,7 +181,7 @@ aside h3 {
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap:1.5rem;
-
+    padding-bottom:2rem;
 }
 .status-box{
 
@@ -185,6 +189,8 @@ aside h3 {
     box-shadow: var(--box-shadow);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
+    transition: all 0.3s;
+
 }
 .status-box span {
     padding:0.6rem;
@@ -206,17 +212,21 @@ aside h3 {
 
 .middle{
     display:flex;
-    padding-top:1rem;
     align-items:center;
-    justify-content: space-around;
-
+    justify-content: space-between;
 }
 
-.ptogress{
+.progress{
     display:flex;
     justify-content: center;
     align-items: center;
-    align-content:center;;
+    align-content:center;
+}
+.progress p{
+    position: absolute;
+    font-size:0.9rem;
+    font-weight: bold;
+    
 }
 
 .progress svg{
@@ -224,21 +234,131 @@ aside h3 {
     height:100px;
     fill:none;
     stroke:var(--color-primary);
-    stroke-width: 13%;
+    stroke-width:15%;
     display:flex;
     justify-content: center;
     align-items:center;    
+    stroke-linecap: round;
 
 }
-
+.total{
+    color:#2b2b30;
+}
 
 .total h3{
     padding-bottom: 0.5rem;
+    font-size:1.1rem;
     
 }
 
 .info{
     padding:1.1rem 0rem;
     color:var(--color-info-dark);
-    font-size:0.8rem;
+    font-size:0.9rem;
 }
+
+.status-box:hover{
+    box-shadow: none;
+
+}
+
+.mid-link{
+    text-align: center;
+    margin: 1rem 0rem;
+    color: var(--color-primary-variant)}
+.mid-link a {
+    color: var(--color-primary)}
+
+.three svg{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+.two svg{
+    stroke-dashoffset:2;
+    stroke-dasharray: 150;
+
+}
+.one svg{
+    stroke-dashoffset: 80;
+    stroke-dasharray: 270;
+}
+
+table{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    /*padding:var(--card-padding);*/
+    box-shadow:var(--box-shadow);
+    width:100%;
+    text-align: center;
+
+}
+.primary{
+    color:var(--color-primary)
+}
+
+table td{
+    height:2rem;
+    width:3rem;
+    border-bottom: 1px solid lightgrey;
+    padding:0.5rem 0rem;
+    color:var(--color-info-dark)
+
+}
+.people{
+    background: white;
+    padding: var(--card-padding);
+    border-radius:var(--card-border-radius);
+    gap:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom:3rem;
+
+}
+.person{
+
+    display:flex;
+    gap:1rem;
+}
+.person img{
+    border-radius: 50%;
+    width:6rem;
+    height:3rem;
+    
+}
+.cart{
+    display:flex;
+    background: white;
+    padding: var(--card-padding);
+    border-radius:10%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.7s;
+}
+.cart:hover{
+    box-shadow: none;
+}
+.cart span{
+    padding:0.6rem;
+    border-radius:50%;
+    color:white;
+    font-weight: bold;
+    font-size:1.8rem;
+}
+.order span{
+    background-color: var(--color-primary);
+}
+.offline span{
+    background-color:var(--color-danger);
+}
+.customers span{
+    background-color: var(--color-success);
+}
+.up{
+    color:var(--color-success);
+    font-weight:bold
+}
+.info h4 {color:black}

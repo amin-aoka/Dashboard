@@ -75,9 +75,8 @@
             <h3>Logout</h3>
           </a>
         </div>
-
-        <!-- sidebar bottom-->
       </aside>
+      <!-----------Main---------->
       <section class="main-section">
         <h1>Dashboard</h1>
         <div class="my-calendar"></div>
@@ -87,12 +86,13 @@
             <div class="middle">
               <div class="total">
                 <h3>Total Sales</h3>
-                <h2>$25,024</h1>
+                <h1>$25,024</h1>
               </div>
               <div class="progress">
                 <svg>
-                  <circle cx="50" cy="50" r="40"></circle>
-                 </svg>
+                  <circle cx="45" cy="45" r="36"></circle>
+                </svg>
+                <p>86%</p>
               </div>
             </div>
             <div class="info">
@@ -104,12 +104,13 @@
             <div class="middle">
               <div class="total">
                 <h3>Total Expense</h3>
-                <h2>$14,160</h2>
+                <h1>$14,160</h2>
               </div>
               <div class="progress">
                 <svg>
-                  <circle cx="50" cy="50" r="40"></circle>
+                  <circle cx="45" cy="45" r="36"></circle>
                 </svg>
+                <p>64%</p>
               </div>
             </div>
             <div class="info">
@@ -121,12 +122,13 @@
             <div class="middle">
               <div class="total">
                 <h3>Total Income</h3>
-                <h2>$10,864</h2>
+                <h1>$10,864</h1>
               </div>
               <div class="progress">
                 <svg>
-                  <circle cx="50" cy="50" r="40"></circle>
+                  <circle cx="45" cy="45" r="36"></circle>
                 </svg>
+                <p>23%</p>
               </div>
             </div>
             <div class="info">
@@ -134,7 +136,82 @@
             </div>
           </div>
         </div>
+        <div class="mid-title">
+          <h2>Recent Orders</h2>
+        </div>
+        <div class="mid-link">
+          <a href="#">Show All</a>
+        </div>
+        <table>
+            <tr>
+              <th>Product's name</th>
+              <th>Product Number</th>
+              <th>Payment</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Foldrable Mini Drone</td>
+              <td>85631</td>
+              <td>Due</td>
+              <td class="primary">pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>LARDEVENDER KF102 Drane</td>
+              <td>363738</td>
+              <td>Refunded</td>
+              <td class="primary">Declined</td>
+              <td class="primary">Details</td>
+            </tr>
+        </table>
       </section>
+      <aside>
+        <h2>Recent Updates</h2>
+        <div class="people">
+
+          <div class="person"> <img src="img/profile-1.jpg" alt=""><p>Lorem ipsum dolor sit amet, lit. Possimus, doloribus. 
+          </p></div>
+
+          <div class="person"> <img src="img/profile-3.jpg" alt=""><p>Lorem ipsum dolor sit amet, . Possimus, doloribus. 
+          </p></div>
+
+          <div class="person"> <img src="img/profile-4.jpg" alt=""><p>Lorem ipsum dolor sit amet,. Possimus, doloribus. 
+          </p></div>
+
+        </div>
+        <h2>Sales Analystics</h2>
+          <div class="order cart">
+            <span class="material-symbols-sharp">shopping_cart</span>
+            <div class="info">
+              <h4>ONLINE ORDERS</h4>
+              <p>Last 24 Hours</p>
+            </div>
+            
+            <p class="percent up">+39%</p>
+            <h4>3849</h4>
+          </div>
+
+          <div class="offline cart">
+            <span class="material-symbols-sharp">shopping_bag</span>
+            <div class="info">
+              <h4>OFFLINE ORDERS</h4>
+              <p>Last 24 Hours</p>
+            </div>
+            <p class="percent down">-17%</p>
+            <h4>1100</h4>
+          </div>
+
+          <div class="customers cart">
+            <span class="material-symbols-sharp">person</span>
+            <div class="info">
+              <h4>CUSTOMER ORDERS</h4>
+              <p>Last 24 Hours</p>
+            </div>
+            <p class="percent up">+25%</p>
+            <h4>849</h4>
+          </div>
+      </aside>
     </div>
     <script src="main.js"></script>
   </body>
