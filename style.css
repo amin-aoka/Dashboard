@@ -1,4 +1,6 @@
-/*General styles*/
+
+
+                        /*General styles*/
 
 :root {
     --color-primary: #7380ec;
@@ -9,7 +11,7 @@
     --color-info-dark: #7d8da1;
     --color-info-light: #e2e3f0;
     --color-dark: #363949;
-    --color-light: rgb(209, 211, 233);
+    --color-light: rgb(227, 228, 241);
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
@@ -29,7 +31,6 @@
     outline:0;
     box-sizing: border-box;
     appearance: none;
-    overflow: hidden;
     text-decoration: none;
     list-style: none;
 }
@@ -37,6 +38,9 @@
 html {
     font-size: 14px;
 }
+
+
+            /*Body and Container*/
 
 body {
     width: 100vw;
@@ -75,21 +79,22 @@ h5 {
 
 .container {
     display: grid;
-    grid-template-columns: 13rem auto 20rem;
+    grid-template-columns: 14rem auto 23rem;
     grid-gap: 1.8rem;
     width: 96%;
     margin: auto;
 }
+                 /*Left side Nav*/
 
 aside {
     height: 100vh;
 }
 
-.top {
+.topl {
     display: flex;
     margin-top: 1.4rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .logo {
@@ -140,7 +145,7 @@ aside h3 {
 }
 
 .logout {
-    margin-top: 1.4rem;
+margin-top: 5rem;
 }
 
 #nums {
@@ -164,13 +169,16 @@ aside h3 {
     color: var(--color-primary);
 }
 
+                       /*Main Section*/
+
+
 .main-section{
     margin-top: 1.5rem;
 }
 
 
 .my-calendar{
-    width:10rem;
+    width:11rem;
     height:2rem;
     border-radius: 5px;
     background-color:#e2e3f0;
@@ -252,7 +260,6 @@ aside h3 {
 }
 
 .info{
-    padding:1.1rem 0rem;
     color:var(--color-info-dark);
     font-size:0.9rem;
 }
@@ -287,7 +294,7 @@ aside h3 {
 table{
     background: var(--color-white);
     border-radius: var(--card-border-radius);
-    /*padding:var(--card-padding);*/
+    padding:var(--card-padding);
     box-shadow:var(--box-shadow);
     width:100%;
     text-align: center;
@@ -303,18 +310,59 @@ table td{
     border-bottom: 1px solid lightgrey;
     padding:0.5rem 0rem;
     color:var(--color-info-dark)
+}
 
+            /* Right side Menu styles*/
+
+.top{
+    display:flex;
+    justify-content: center;
+    margin-top: 1rem;
+ }
+
+.theme{
+    background: var(--color-light);
+    display: inline-flex;
+    align-items: center;
+    width:4.3rem;
+    height:1.5rem;
+    color:White;
+    justify-content: space-between;
+    border-radius: 10%;
+    align-self: flex-start;
+}
+.theme span {
+    font-size: 1.3rem;
+    padding:0.5rem
+}
+.user{
+   display:inline-flex;
+   flex-direction: column;
+   position: relative;
+   right:0px;
+   margin-left:2rem;
+}
+.user img {
+    border-radius: 50%;
+    width:3rem;
+    height:3rem;
 }
 .people{
     background: white;
     padding: var(--card-padding);
     border-radius:var(--card-border-radius);
-    gap:2rem;
+    gap:1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom:3rem;
+    margin-bottom:2rem;
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
 
+}
+.person .text{
+    margin:0;
+    padding:0;
 }
 .person{
 
@@ -323,20 +371,20 @@ table td{
 }
 .person img{
     border-radius: 50%;
-    width:6rem;
+    width:5rem;
     height:3rem;
     
 }
 .cart{
     display:flex;
     background: white;
-    padding: var(--card-padding);
-    border-radius:10%;
+    border-radius:1rem;
     justify-content: space-around;
     align-items: center;
     margin-top:1rem;
     box-shadow: var(--box-shadow);
     transition: all 0.7s;
+    padding:1.5rem;
 }
 .cart:hover{
     box-shadow: none;
@@ -362,3 +410,24 @@ table td{
     font-weight:bold
 }
 .info h4 {color:black}
+
+
+
+.down{
+    color: var(--color-danger);
+    font-weight:bold
+}
+
+.new{
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.7s;
+    padding:1.5rem;
+    border:2px dashed var(--color-primary);
+    border-radius:0.8rem;
+
+}
