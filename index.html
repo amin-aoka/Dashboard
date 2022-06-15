@@ -19,6 +19,9 @@
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        <span class="material-symbols-sharp">menu</span>
+      </div>
       <aside>
         <!--Top section of side bar-->
         <div class="topl">
@@ -78,6 +81,7 @@
       </aside>
       <!-----------Main---------->
       <section class="main-section">
+
         <h1>Dashboard</h1>
         <div class="my-calendar"></div>
         <div class="status">
@@ -188,20 +192,21 @@
         </table>
       </section>
       <!--------Right aside ----------->
-      <aside>
+      <aside class ="right-aside">
         <div class="top">
-          
+          <div class="theme">
             <span class="material-symbols-sharp light">
               light_mode
               </span>
               <span class="material-symbols-sharp dark">
                 dark_mode
                 </span>
+          </div>
           
           <div class="user">
             <p>Ola,<strong>Kayky</strong></p>
             <p>Admin</p>
-            <img src="/img/profile-2.jpg" alt="">
+            <img id= "userimg" src="/img/profile-2.jpg" alt="">
           </div>
         </div>
         
@@ -229,40 +234,42 @@
           </div> </div>
 
         </div>
-        <h2>Sales Analystics</h2>
-          <div class="order cart">
-            <span class="material-symbols-sharp">shopping_cart</span>
-            <div class="info">
-              <h4>ONLINE ORDERS</h4>
-              <p>Last 24 Hours</p>
+        <div class ="carts">
+          <h2>Sales Analystics</h2>
+            <div class="order cart">
+              <span class="material-symbols-sharp">shopping_cart</span>
+              <div class="info">
+                <h4>ONLINE ORDERS</h4>
+                <p>Last 24 Hours</p>
+              </div>
+              
+              <p class="percent up">+39%</p>
+              <h4>3849</h4>
             </div>
-            
-            <p class="percent up">+39%</p>
-            <h4>3849</h4>
-          </div>
 
-          <div class="offline cart">
-            <span class="material-symbols-sharp">shopping_bag</span>
-            <div class="info">
-              <h4>OFFLINE ORDERS</h4>
-              <p>Last 24 Hours</p>
+            <div class="offline cart">
+              <span class="material-symbols-sharp">shopping_bag</span>
+              <div class="info">
+                <h4>OFFLINE ORDERS</h4>
+                <p>Last 24 Hours</p>
+              </div>
+              <p class="percent down">-17%</p>
+              <h4>1100</h4>
             </div>
-            <p class="percent down">-17%</p>
-            <h4>1100</h4>
-          </div>
 
-          <div class="customers cart">
-            <span class="material-symbols-sharp">person</span>
-            <div class="info">
-              <h4>CUSTOMER ORDERS</h4>
-              <p>Last 24 Hours</p>
+            <div class="customers cart">
+              <span class="material-symbols-sharp">person</span>
+              <div class="info">
+                <h4>CUSTOMER ORDERS</h4>
+                <p>Last 24 Hours</p>
+              </div>
+              <p class="percent up">+25%</p>
+              <h4>849</h4>
             </div>
-            <p class="percent up">+25%</p>
-            <h4>849</h4>
-          </div>
-          <div class=" new">
-            <h4> + Add Products</h4>
-          </div>
+            <div class=" new">
+              <h4> + Add Products</h4>
+            </div>
+        </div>
       </aside>
     </div>
     <script src="main.js"></script>
