@@ -111,15 +111,21 @@ aside {
     color: var(--color-danger);
 }
 
+
 .close {
-    display: none;
+    display:none;
+    font-weight: bold;
+    position:absolute;
+    right:1rem;
+}
+.close span{
+    font-weight: bold;
 }
 
 .side-bar {
     margin-top: 3.1rem;
     display: flex;
     flex-direction: column;
-    position: relative;
     height: 96vh;
 }
 
@@ -200,6 +206,8 @@ margin-top: 5rem;
     transition: all 0.3s;
 
 }
+
+
 .status-box span {
     padding:0.6rem;
     border-radius:50%;
@@ -327,11 +335,18 @@ table td{
  }
 
 
-.top span {
+.theme span {
     font-size: 1.3rem;
     padding:0.5rem;
     color:White;
     height:2.5rem;
+}
+.theme{
+    display:flex;
+    justify-content: center;
+    color:white;
+    position:absolute;
+    right:6rem;
 }
 
 .dark {
@@ -345,8 +360,6 @@ table td{
     border-bottom-left-radius: 1rem;
     background-color:var(--color-primary);
 
-
- 
 }
 .user{
    display:inline-flex;
@@ -402,6 +415,7 @@ table td{
     transition: all 0.7s;
     padding:1.5rem;
 }
+
 .cart:hover{
     box-shadow: none;
 }
@@ -458,8 +472,57 @@ table td{
 
 @media only screen and (max-width:600px){
 
-    aside{
-        display: none;
+
+
+    .header{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background:white;
+        height:5rem;
+        padding:1rem;
+        box-shadow: var(--box-shadow);
+        position:fixed;
+        width:100%;
+    }
+    
+    .header .menu{
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    
+    .theme{
+        position:absolute;
+        right:4.3rem;
+    }
+    
+    #userimg{
+        border-radius: 50%;
+        width:3rem;
+        height:3rem;
+    }
+
+
+
+.left-aside{
+    display:block;
+    width:50%;
+    position: fixed;
+    background: white;
+    transition: all 0.7s;
+    transform:translateX(-19rem)
+    
+}
+.left-aside a span{
+    font-size:2rem;
+
+}
+.left-aside a h3{
+    font-size:1rem;
+}
+
+    .right-aside{
+        display:none;
     }
     .container {
         display:flex;
@@ -470,8 +533,7 @@ table td{
     .main-section{
         display:flex;
         flex-direction: column;
-        align-items: flex-start;
-        width:96%;
+        width:90%;
         margin:auto;
     }
     .status-box{
@@ -487,6 +549,10 @@ table td{
     width:100%;
     text-align: left;
     margin-top: 2rem;
+    
+  }
+  .people{
+    width:100%;
   }
 
   .person{
@@ -497,32 +563,7 @@ table td{
     height:3.5rem;
   }
 
-.header{
-    display:flex;
-    align-items: center;
-    text-align: left;
-    background:white;
-    height:5rem;
-    padding:1rem;
-    box-shadow: var(--box-shadow);
-}
 
-.header span {
-    font-weight: bold;
-    font-size: 2.5rem;
-}
 
-#userimg{
-    border-radius: 50%;
-    width:3rem;
-    height:3rem;
-}
-
-.theme span {
-    font-size: 1.3rem;
-    padding:0.5rem;
-    color:White;
-    height:2.5rem;
-}
 
 }
