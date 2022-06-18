@@ -39,6 +39,15 @@ html {
     font-size: 14px;
 }
 
+.dark-theme-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: #rgba(0 ,0 0, 0.4);
+    --box-shadow : 0 2rem 3rem var(--color-light);
+}
+
 
             /*Body and Container*/
 
@@ -50,18 +59,17 @@ body {
     background: var(--color-background);
     user-select: none;
     overflow-x: hidden;
+    color:var(--color-dark)
 }
 
 h1 {
     font-weight: 800;
     font-size: 1.8rem;
-    color:#2b2b30;
 
 }
 
 h2 {
     font-size: 1.4rem;
-    color:#2b2b30;
 
 }
 
@@ -257,9 +265,7 @@ margin-top: 5rem;
     stroke-linecap: round;
 
 }
-.total{
-    color:#2b2b30;
-}
+
 
 .total h3{
     padding-bottom: 0.5rem;
@@ -338,29 +344,31 @@ table td{
 .theme span {
     font-size: 1.3rem;
     padding:0.5rem;
-    color:White;
     height:2.5rem;
+    
 }
 .theme{
     display:flex;
     justify-content: center;
-    color:white;
     position:absolute;
     right:6rem;
+    background-color:var(--color-info-light);
+    color:black;
+    border-radius: 1rem;
 }
 
-.dark {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    background-color:#e2e3f0;
+.theme span.active{
+    background: var(--color-primary);
+    border-radius: 1rem;
+    color:white;
 
 }
-.light{
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    background-color:var(--color-primary);
-
+#menu{
+    display:none;
 }
+
+
+
 .user{
    display:inline-flex;
    flex-direction: column;
@@ -374,7 +382,7 @@ table td{
     height:3rem;
 }
 .people{
-    background: white;
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius:var(--card-border-radius);
     gap:1rem;
@@ -406,7 +414,7 @@ table td{
 }
 .cart{
     display:flex;
-    background: white;
+    background: var(--color-white);
     border-radius:1rem;
     justify-content: space-around;
     align-items: center;
@@ -439,7 +447,7 @@ table td{
     color:var(--color-success);
     font-weight:bold
 }
-.info h4 {color:black}
+.info h4 {color:var(--color-dark)}
 
 
 
@@ -449,7 +457,7 @@ table td{
 }
 
 .new{
-
+    background: var(--color-white);
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -473,45 +481,50 @@ table td{
 @media only screen and (max-width:600px){
 
 
+.top{
+    align-items: center;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: var(--color-white);
+    margin-top: 0;
+    height:5rem;
 
-    .header{
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        background:white;
-        height:5rem;
-        padding:1rem;
-        box-shadow: var(--box-shadow);
-        position:fixed;
-        width:100%;
-    }
-    
-    .header .menu{
-        font-weight: bold;
-        font-size: 2.5rem;
-    }
-    
-    .theme{
-        position:absolute;
-        right:4.3rem;
-    }
-    
-    #userimg{
-        border-radius: 50%;
-        width:3rem;
-        height:3rem;
-    }
+}
+.top .user p {
+    display:none;
+}
 
+#menu{
+    display:inline-block;
+    z-index:3;
+    position:absolute;
+    left:1rem;
+    font-weight: bold;
+    font-size:2rem;
+    
 
+}
+.close{
+    display:inline-block;
+}
 
 .left-aside{
-    display:block;
+    display:none;
     width:50%;
     position: fixed;
-    background: white;
+    background: var(--color-white);
     transition: all 0.7s;
-    transform:translateX(-19rem)
-    
+    transform:translateX(-15rem);
+    animation:smooth 400ms ease forwards;
+    margin-top: 4rem;
+    position: fixed;
+    left:0;
+}
+
+@keyframes smooth{
+    to{transform:translateX(0rem)}
 }
 .left-aside a span{
     font-size:2rem;
@@ -521,20 +534,18 @@ table td{
     font-size:1rem;
 }
 
-    .right-aside{
-        display:none;
-    }
     .container {
-        display:flex;
-        flex-direction: column;
-        width:100vw;
+    grid-template-columns: 1fr;
+    width:100vw;
+    padding:0 2rem;
+    
        
     }
+  
     .main-section{
         display:flex;
         flex-direction: column;
-        width:90%;
-        margin:auto;
+        margin-top:6rem;
     }
     .status-box{
       padding:2rem 4rem;
@@ -546,14 +557,11 @@ table td{
         margin:auto;
     }
   .carts {
-    width:100%;
     text-align: left;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     
   }
-  .people{
-    width:100%;
-  }
+ 
 
   .person{
    gap:0.5rem;
